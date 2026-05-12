@@ -261,11 +261,12 @@ def boxplot(image_features, patient_labels, patient_IDs=None, figsize=(15,15)):
 
             fz = 5  # Works best after saving
             ax.set_title(lab, fontsize=fz)
-            for tick in ax.xaxis.get_major_ticks():
-                tick.label.set_fontsize(fz)
+            ax.tick_params(axis='both', labelsize=fz)
+#            for tick in ax.xaxis.get_major_ticks():
+#                tick.label.set_fontsize(fz)
 
-            for tick in ax.yaxis.get_major_ticks():
-                tick.label.set_fontsize(fz)
+#            for tick in ax.yaxis.get_major_ticks():
+#                tick.label.set_fontsize(fz)
 
             fignum += 1
     plt.show()
